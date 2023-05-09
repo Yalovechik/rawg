@@ -3,7 +3,7 @@ import useGames from "../hooks/useGames";
 import GameCards from "./GameCards";
 
 function GameGrid() {
-  const { games, error } = useGames();
+  const { data: games, error } = useGames();
 
   return (
     <div>

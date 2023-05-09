@@ -1,8 +1,7 @@
-import React from "react";
 import useGenres from "../hooks/useGenres";
 
 function ListGenres() {
-  const { genres, error } = useGenres();
+  const { data: genres } = useGenres();
 
   return (
     <div>

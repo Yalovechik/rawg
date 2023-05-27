@@ -4,16 +4,11 @@ import usePlatforms from "../hooks/usePlatforms";
 
 interface Props {
   OnSelectOrder: (sortOrder: string) => void;
-  sortOrder: string;
-}
-
-export interface Sort {
-  value: string;
-  label: string;
+  sortOrder: string | null;
 }
 
 export default function SortSelector({ OnSelectOrder, sortOrder }: Props) {
-  const sortOrders: Sort[] = [
+  const sortOrders = [
     { value: "", label: "Relevance" },
     { value: "-added", label: "Date Added" },
     { value: "name", label: "Name" },
